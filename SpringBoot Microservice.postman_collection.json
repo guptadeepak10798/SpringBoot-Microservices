@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "08b5b4b3-87ee-4e09-a2b9-ac9db58fc5e3",
+		"name": "SpringBoot Microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19881091"
+	},
+	"item": [
+		{
+			"name": "LibraryService",
+			"item": [
+				{
+					"name": "InsertLibrary",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":  \"Sulabh Vachnalay\",\r\n    \"address\" : \"Kandivali west\",\r\n    \"email\" : \"sulabh.vachnalya@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9092/library/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9092",
+							"path": [
+								"library",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLibraryById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9092/library/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9092",
+							"path": [
+								"library",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BookService",
+			"item": [
+				{
+					"name": "InsertBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\" : \"Physics\",\r\n\"author\": \"H.C Verma\",\r\n\"price\" : \"150\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9093/book/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9093",
+							"path": [
+								"book",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBookById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9093/book/Book/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9093",
+							"path": [
+								"book",
+								"Book",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StudentService",
+			"item": [
+				{
+					"name": "InsertStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ajay\",\r\n    \"fathername\" : \"Ramnivas\",\r\n    \"address\": \"Mumbia,Kandivali,India\",\r\n    \"age\": 22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/student/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"student",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStudentById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9091/student/Student/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"student",
+								"Student",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API GatewayTest",
+			"item": [
+				{
+					"name": "Get StudentLibraryBook",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9094/student/Student/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9094",
+							"path": [
+								"student",
+								"Student",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
